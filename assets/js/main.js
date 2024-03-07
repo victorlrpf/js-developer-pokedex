@@ -7,7 +7,8 @@ let offset = 0;
 
 function convertPokemonToLi(pokemon) {
     return `
-        <li class="pokemon ${pokemon.type}">
+    <li class="pokemon ${pokemon.type}">
+        <button class="pokemon ${pokemon.type}">
             <span class="number">#${pokemon.number}</span>
             <span class="name">${pokemon.name}</span>
 
@@ -19,7 +20,8 @@ function convertPokemonToLi(pokemon) {
                 <img src="${pokemon.photo}"
                      alt="${pokemon.name}">
             </div>
-        </li>
+        </button
+    </li>
     `
 }
 
@@ -45,3 +47,24 @@ loadMoreButton.addEventListener('click', () => {
         loadPokemonItens(offset, limit)
     }
 })
+
+document.getElementById("hamburger-menu").addEventListener("click", function() {
+    const navigationList = document.getElementById("navigation-list");
+    navigationList.classList.toggle("active");
+
+    const bars = document.querySelectorAll(".bar");
+    bars.forEach(bar => {
+        bar.style.transform = bar.style.transform === "rotate(45deg)" ? "rotate(0)" : "rotate(45deg)";
+    });
+});
+
+document.getElementById("navigation-list").classList.remove("visible");
+
+document.getElementById("hamburger-menu").addEventListener("click", function() {
+    const navigationList = document.getElementById("navigation-list");
+    if (navigationList.style.display === "none") {
+        navigationList.style.display = "flex";
+    } else {
+        navigationList.style.display = "none";
+    }
+});
