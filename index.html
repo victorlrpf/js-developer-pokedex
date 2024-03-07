@@ -24,44 +24,28 @@
 
 <body>
     <section class="content">
-        <div class="cont-nav" style="display: flex; justify-content: space-between; align-items: center;">
-            <h1>Pokedex</h1>
-            
-            <nav>
-                <div id="hamburger-menu">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </div>
-                <ul id="navigation-list">
-                    <li><a href="#">Gen 1 | Kanto</a></li>
-                    <li><a href="#">Gen 2 | Jotho</a></li>
-                    <li><a href="#">Gen 3 | Hoenn</a></li>
-                    <li><a href="#">Gen 4 | Sinnoh</a></li>
-                    <li><a href="#">Gen 5 | Unova</a></li>
-                    <li><a href="#">Gen 6 | Kalos</a></li>
-                    <li><a href="#">Gen 7 | Alola</a></li>
-                    <li><a href="#">Gen 8 | Galar</a></li>
-                    <li><a href="#">Gen 9 | Paldeas</a></li>
-                </ul>
-            </nav>
-        </div>
-
+        <h1>Pokedex</h1> 
+        <ol id="detalhes">Clique Em um Pokemon para ver seus detalhes</ol>
         <ol id="pokemonList" class="pokemons">
             <!-- ..... Pokemons here ..... -->
+           
+            
         </ol>
 
         <div class="pagination">
             <button id="loadMoreButton" type="button">
-                Load More
+               Carregar mais
             </button>
+            
         </div>
     </section>
+    
 
     <!-- Nosso JS -->
     <script src="/assets/js/pokemon-model.js"></script>
     <script src="/assets/js/poke-api.js"></script>
     <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/details.js" async defer></script>
 </body>
 
 </html>

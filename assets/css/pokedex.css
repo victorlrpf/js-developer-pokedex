@@ -82,8 +82,13 @@
     display: flex;
     flex-direction: column;
     margin: .5rem;
-    padding: .5rem;
+    padding: 1rem;
     border-radius: 1rem;
+    
+}
+.pokemon:hover {
+    transform:0;
+    position:initial;
 }
 
 .pokemon .number {
